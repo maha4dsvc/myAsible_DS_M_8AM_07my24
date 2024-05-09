@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: install webserver on RedHat nodes
+    dnf:
+      name: httpd
+      
