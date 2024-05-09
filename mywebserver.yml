@@ -6,5 +6,10 @@
     dnf:
       name: httpd
       state: present
+
+  - name : start webserver on RedHat nodes  
+    service: 
+      name: httpd
+      state: started
       
 
