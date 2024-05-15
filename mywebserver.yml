@@ -1,6 +1,7 @@
 ---
 - hosts: all
   become: yes
+  gather_facts: yes
   tasks:
   - name: install webserver on RedHat nodes
     dnf:
@@ -12,6 +13,6 @@
       name: httpd
       state: started
 
-      
+
       
 
