@@ -5,14 +5,14 @@
   tasks:
   - name: install webserver on RedHat nodes
     dnf:
-      name: httpd
+      name: "{{mywebapackonrehat}}"
       state: present
     when: ansible_os_family=="RedHat"
     
 
   - name : start webserver on RedHat nodes  
     service: 
-      name: httpd
+      name: "{{mywebapackonrehat}}"
       state: started
     when: ansible_os_family=="RedHat"
 
