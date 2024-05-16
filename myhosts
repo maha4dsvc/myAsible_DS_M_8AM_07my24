@@ -16,5 +16,5 @@
 
 
 [mywebserver:vars]
-mywebapackonrehat= httpddddddd
+mywebapackonrehat= httpd
 
