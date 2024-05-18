@@ -1,0 +1,10 @@
+---
+- hosts: 172.31.7.192
+  become: yes
+  tasks:
+  - include_tasks: myfile.yml
+  - name: install websever
+    dnf:
+      name: httpd
+      state: present
+ 
