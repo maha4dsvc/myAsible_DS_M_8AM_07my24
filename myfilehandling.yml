@@ -7,4 +7,8 @@
     dnf:
       name: httpd
       state: present
+  - name: copy text file 
+    copy:
+      src: mytestfile
+      dest: /home/maha/mytestfile
  
