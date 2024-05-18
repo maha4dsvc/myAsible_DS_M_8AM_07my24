@@ -1,0 +1,21 @@
+---
+- hosts: 172.31.7.192
+  become: yes
+  tasks: 
+  - name: install git
+    dnf: 
+      name: git 
+      state: present 
+    tags: mygit
+
+  - name: install tree
+    dnf:
+      name: tree
+      state: present
+    tags: mytree
+
+  - name: install wget
+    dnf:
+      name: wget
+      state: present
+    tags: mywget
