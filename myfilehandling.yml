@@ -7,6 +7,12 @@
     dnf:
       name: httpd
       state: present
+
+  - name: start  websever
+    service:
+      name: httpd
+      state: started
+      
   - name: copy text file 
     copy:
       src: mytestfile
@@ -17,4 +23,3 @@
        url: https://adp-mirror-vm1-he-fi.apache.org/tomcat/tomcat-10/v10.0.20/bin/apache-tomcat-10.0.20-deployer.tar.gz
        dest: /home/maha/apache-tomcat-10.0.20-deployer.tar.gz
        force_basic_auth: yes
- 
