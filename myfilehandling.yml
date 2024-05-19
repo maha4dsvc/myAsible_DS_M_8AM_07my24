@@ -8,11 +8,7 @@
       name: httpd
       state: present
 
-  - name: start  websever
-    service:
-      name: httpd
-      state: started
-
+  
   - name: copy text file 
     copy:
       src: mytestfile
@@ -28,3 +24,10 @@
     template:
         src: myindex.j2
         dest: /var/www/html/index.html
+    notify: startwebsever
+
+  handlers: 
+  - name: startwebsever
+    service:
+      name: httpd
+      state: started
