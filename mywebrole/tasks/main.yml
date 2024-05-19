@@ -1,2 +1,13 @@
 ---
 # tasks file for mywebrole
+- name: install webserver
+  dnf:
+    name: httpd
+    state: present
+  notify: startwebserver
+
+- name: copy index file into node side
+  template:
+      src: templates/myindex.j2
+      dest: /var/www/html/index.html
+  notify: startwebserver

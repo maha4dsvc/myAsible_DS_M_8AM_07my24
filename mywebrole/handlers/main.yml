@@ -1,2 +1,7 @@
 ---
 # handlers file for mywebrole
+- name: startwebserver
+  service:
+      name: httpd
+      state: started
+  
