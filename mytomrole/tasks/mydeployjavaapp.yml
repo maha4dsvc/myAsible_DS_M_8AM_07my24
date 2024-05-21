@@ -1,0 +1,6 @@
+---
+- name: depploy sprint project as login 
+  get_url:
+    url: https://mywarfile26jan24.s3.amazonaws.com/login.war
+    dest: /opt/tomcat/webapps/login.war
+    force_basic_auth: yes
