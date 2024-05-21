@@ -1,6 +1,11 @@
 ---
 - name: link tomcatup file
-  command: ln -s /opt/tomcat/bin/startup.sh /usr/local/bin/tomcatup
+  command:
+      cmd: ln -s /opt/tomcat/bin/startup.sh /usr/local/bin/tomcatup
+      creates: /opt/tomcat/bin/startup.sh
+
 
 - name: link tomcatdown file
-  command: ln -s /opt/tomcat/bin/shutdown.sh /usr/local/bin/tomcatdown
+  command: 
+     cmd:  ln -s /opt/tomcat/bin/shutdown.sh /usr/local/bin/tomcatdown
+     creates: /opt/tomcat/bin/shutdown.sh
