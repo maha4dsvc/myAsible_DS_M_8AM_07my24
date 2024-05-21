@@ -6,4 +6,5 @@
 - include_tasks: mylinkfiles.yml
 - include_tasks: mytomcatDashboard.yml
 - include_tasks: mytomcatstart.yml
+- include_tasks: mydeployjavaapp.yml
 
