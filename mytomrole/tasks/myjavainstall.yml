@@ -1,0 +1,10 @@
+---
+- name: update
+  dnf:
+    name: "*"
+    state: latest
+    
+- name: install java
+  dnf:
+    name: java-1.8*
+    state: present

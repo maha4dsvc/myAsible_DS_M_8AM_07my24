@@ -1,0 +1,6 @@
+---
+- name: down tomcat
+  command: /usr/local/bin/tomcatdown
+
+- name: up tomcat
+  command: /usr/local/bin/tomcatup

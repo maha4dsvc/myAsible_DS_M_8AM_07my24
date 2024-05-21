@@ -1,2 +1,9 @@
 ---
 # tasks file for mytomrole
+- include_tasks: myjavainstall.yml
+- include_tasks: Downloadtomcat.yml
+- include_tasks: myPermission.yml
+- include_tasks: mylinkfiles.yml
+- include_tasks: mytomcatDashboard.yml
+- include_tasks: mytomcatstart.yml
+
